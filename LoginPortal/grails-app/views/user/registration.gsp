@@ -3,6 +3,10 @@
   <head>
     <meta name="layout" content="main"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
     <title>Form</title>
   </head>
   <body>
@@ -35,7 +39,9 @@
               </div>
               <div class="form-group">
                 <label>Email: </label>
-                <g:textField class="form-control" name="email"/>
+                <g:textField id="email" class="form-control" name="email"/>
+                <span class="text-success" style="font-size:18px" id="sid"></span>
+                <span class="text-danger" style="font-size:18px" id="did"></span>
               </div>
               <div class="form-group">
                 <label>Birthdate: </label>
@@ -50,5 +56,34 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+  <script>
+  $(document).ready(function(){
+    $('#email').blur(function(){
+      var mail=$('#email').val();
+      $.ajax({
+        url:"${g.createLink(controller:'User',action:'ajaxCall')}",
+        data:{email:mail},
+        success:function(data){
+          if(data<=0){
+            $('#did').html("");
+            $('#sid').html("Valid Email");
+          }
+          else{
+            $('#sid').html("");
+            $('#did').html("Invalid Email");
+          }
+        }
+      });
+    });
+  })
+</script>
+
   </body>
 </html>

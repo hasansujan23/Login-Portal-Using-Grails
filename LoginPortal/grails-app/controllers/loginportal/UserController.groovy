@@ -68,4 +68,9 @@ class UserController {
     		redirect(action:"login")
     	}
     }
+
+    def ajaxCall(){
+        def ck=User.countByEmail(params.email)
+        render ck
+    }
 }
