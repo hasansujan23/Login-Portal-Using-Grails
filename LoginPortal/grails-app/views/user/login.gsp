@@ -14,6 +14,16 @@
 
   <body>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <g:if test="${flash.message}">
+            <p class="alert alert-success" role="status">${flash.message}</p>
+          </g:if>
+        </div>
+      </div>
+    </div>
+
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-8 mx-auto">
