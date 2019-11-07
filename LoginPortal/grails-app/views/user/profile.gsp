@@ -31,7 +31,9 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown my-2 my-lg-0">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          User
+          <g:each in="${person}" var="p" status="i">
+            ${p.firstName} ${p.lastName}
+          </g:each>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#">Change Password</a>

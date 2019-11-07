@@ -18,4 +18,8 @@ class User {
     	birthDate blank:false,nullable:false
     	password blank:false,nullable:false
     }
+
+    def beforeInsert (){
+        this.password = this.password.encodeAsMD5()
+    }
 }

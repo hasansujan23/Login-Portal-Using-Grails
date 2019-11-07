@@ -50,7 +50,7 @@ class UserController {
     }
 
     def check(){
-    	def cnt=User.findByEmailAndPassword(params.email,params.password)
+    	def cnt=User.findByEmailAndPassword(params.email,params.password.encodeAsMD5())
     	if(cnt){
     		session.email=params.email
     		session.password=params.password
