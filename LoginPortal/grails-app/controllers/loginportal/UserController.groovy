@@ -3,7 +3,7 @@ package loginportal
 class UserController {
 
     def index() {
-    	if(session.user==null){
+    	if(session.email==null){
     		redirect(action:"login")
     	}
     	else{
@@ -20,8 +20,19 @@ class UserController {
     }
 
     def profile(){
-    	def person=chainModel['persons']
-    	[person:person]
+    	if(session.email==null){
+    		redirect(action:"login")
+    	}
+    	else{
+    		//def person=chainModel['persons']
+    		//[person:person]
+    		def query=User.where {
+    			email==session.email
+    		}
+    		def person=query.list()
+    		[person:person]
+    	}
+    	
     }
 
     def save(){
@@ -41,13 +52,16 @@ class UserController {
     def check(){
     	def cnt=User.findByEmailAndPassword(params.email,params.password)
     	if(cnt){
-    		def query=User.where {
-    			email==params.email
-    		}
-    		def person=query.list()
+    		session.email=params.email
+    		session.password=params.password
+    		redirect(action:"profile")
+    		//def query=User.where {
+    			//email==params.email
+    		//}
+    		//def person=query.list()
     		//render(view:"profile",model:[person:person])
     		//redirect(action:"profile",params:[person:person])
-    		chain(action: "profile", model: [persons:person])
+    		//chain(action: "profile", model: [persons:person])
     	}
     	else{
     		flash.error="Wrong email or password."
