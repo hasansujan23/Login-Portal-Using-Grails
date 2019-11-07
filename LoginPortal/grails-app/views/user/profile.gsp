@@ -53,30 +53,32 @@
           <div class="card">
             <div class="card-body">
               <table class="table">
+                <g:each in="${person}" var="p" status="i">
                 <tr>
                   <th>First Name</th>
-                  <td>Md Abdullah</td>
+                  <td>${p.firstName}</td>
                 </tr>
                 <tr>
                   <th>Last Name</th>
-                  <td>Al Hasan</td>
+                  <td>${p.lastName}</td>
                 </tr>
                 <tr>
                   <th>Address</th>
-                  <td>Baridhara J Block, Notunbaza, Dhaka - 1212</td>
+                  <td>${p.address}</td>
                 </tr>
                 <tr>
                   <th>Phone</th>
-                  <td>+8801754704559</td>
+                  <td>${p.phone}</td>
                 </tr>
                 <tr>
                   <th>Email</th>
-                  <td>hasansujan23@gmail.com</td>
+                  <td>${p.email}</td>
                 </tr>
                 <tr>
                   <th>Birthdate</th>
-                  <td>04/08/1996</td>
+                  <td>${p.birthDate}</td>
                 </tr>
+                </g:each>
               </table>
             </div>
           </div>

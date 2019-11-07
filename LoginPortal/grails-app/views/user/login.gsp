@@ -21,6 +21,11 @@
             <p class="alert alert-success" role="status">${flash.message}</p>
           </g:if>
         </div>
+        <div class="col-md-12 text-center">
+          <g:if test="${flash.error}">
+            <p class="alert alert-danger" role="status">${flash.error}</p>
+          </g:if>
+        </div>
       </div>
     </div>
 
@@ -33,18 +38,18 @@
           </div>
           <div class="card">
             <div class="card-body">
-              <form action="">
+              <g:form controller="User" action="check">
                 <div class="form-group">
                   <label for="">Email Address</label>
-                  <input class="form-control" type="email" name="" placeholder="Enter your email address">
+                  <g:textField class="form-control" name="email"/>
                 </div>
                 <div class="form-group">
                   <label for="">Password</label>
-                  <input class="form-control" type="password" name="" placeholder="Enter your password">
+                  <g:textField class="form-control" name="password"/>
                 </div>
-                <input type="submit" class="btn btn-outline-secondary" name="submit" value="Submit">
+                <input type="submit" class="btn btn-outline-success" name="submit" value="Submit">
                 <button class="btn btn-outline-secondary" style="margin-left: 10px;">Clear</button>
-              </form>
+              </g:form>
             </div>
           </div>
         </div>
