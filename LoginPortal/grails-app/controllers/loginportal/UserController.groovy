@@ -19,6 +19,10 @@ class UserController {
 
     }
 
+    def changepassword(){
+        render(view:"change-password")
+    }
+
     def profile(){
     	if(session.email==null){
     		redirect(action:"login")
@@ -77,5 +81,26 @@ class UserController {
     def logout(){
         session.invalidate()
         redirect(action:"login")
+    }
+
+    def update(){
+        if(params.pPassword=="" || params.nPassword=="" || params.cPassword==""){
+            flash.error="You should complete all the field"
+            redirect(action:"changepassword")
+        }
+        else if(params.nPassword!=params.cPassword){
+            flash.error="New password and confirm password doesn't match"
+            redirect(action:"changepassword")
+        }
+        else if(User.executeUpdate("update User set password=:newPassword where email=:userEmail and password=:oldPassword",[newPassword:params.nPassword.encodeAsMD5(),userEmail:session.email,oldPassword:params.pPassword.encodeAsMD5()])){
+            session.password=params.nPassword
+            flash.message="Password change successfully :)"
+            redirect(action:"changepassword") 
+        }
+        else{
+            flash.error="Previous password is wrong"
+            redirect(action:"changepassword")
+        }
+        
     }
 }

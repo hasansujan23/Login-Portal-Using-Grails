@@ -36,7 +36,7 @@
           </g:each>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <g:link class="dropdown-item" action="" id="">Change Password</g:link>
+          <g:link class="dropdown-item" action="changepassword" id="">Change Password</g:link>
           <g:link class="dropdown-item" action="logout" id="">Logout</g:link>
         </div>
       </li>

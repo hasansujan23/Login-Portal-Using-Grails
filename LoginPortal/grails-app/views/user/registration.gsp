@@ -49,7 +49,7 @@
               </div>  
               <div class="form-group">
                 <label>Password: </label>
-                <g:textField class="form-control" name="password"/>
+                <g:passwordField class="form-control" name="password"/>
               </div>
               <input type="submit" class="btn btn-success" value="Register">
           </g:form>
