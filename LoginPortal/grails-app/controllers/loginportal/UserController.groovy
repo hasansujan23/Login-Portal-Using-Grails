@@ -73,4 +73,9 @@ class UserController {
         def ck=User.countByEmail(params.email)
         render ck
     }
+
+    def logout(){
+        session.invalidate()
+        redirect(action:"login")
+    }
 }
