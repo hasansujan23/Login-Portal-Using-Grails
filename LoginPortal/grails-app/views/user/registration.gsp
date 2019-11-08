@@ -45,7 +45,7 @@
               </div>
               <div class="form-group">
                 <label>Birthdate: </label>
-                <g:datePicker class="form-control" name="birthDate" precision="year"/>
+                <g:datePicker class="form-control" name="birthDate" precision="year" precision="month" precision="day"/>
               </div>  
               <div class="form-group">
                 <label>Password: </label>
