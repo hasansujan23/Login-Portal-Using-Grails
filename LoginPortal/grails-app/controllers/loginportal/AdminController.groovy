@@ -12,7 +12,7 @@ class AdminController {
     	}
     	else{
     		def persons=User.findAllByLastNameLike("%${params.name}%")
-    		[persons:persons]
+    		[persons:persons,userName:params.name]
     	}
     	
     }

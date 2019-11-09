@@ -13,6 +13,7 @@
     <g:if test="${flash.message}">
       <div class="alert alert-danger mt-2" role="status">${flash.message}</div>
     </g:if>
+
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-8 mx-auto">

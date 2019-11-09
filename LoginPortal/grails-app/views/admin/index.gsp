@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <title>Admin</title>
     <style>
       .bgcolor{
@@ -53,7 +53,7 @@
         <div class="input-group-prepend">
           <div class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></div>
         </div>
-        <g:textField class="form-control" name="name" placeholder="Search by user last name"/>
+        <g:textField class="form-control" name="name" value="${userName}" placeholder="Search by user last name"/>
       </div>
           </g:form>
         </div>
