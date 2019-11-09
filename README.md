@@ -37,5 +37,17 @@ These instructions will get you a copy of the project up and running on your loc
 Follow the steps to install the project in your local environment.
 
 - Goto your phpmyadmin panel and create a database named portaldb.
-- Then goto application.yml file and change username or password
+- Then goto application.yml file and change username or password.
 - If you change the database name in phpmyadmin then you have to change the database name in application.yml file also.
+
+# Project Demo
+
+<img src="images/login.png" width="100%" />
+
+<img src="images/registration.png" width="100%" />
+
+<img src="images/profile.png" width="100%" />
+
+<img src="images/change.png" width="100%" />
+
+<img src="images/admin.png" width="100%" />
