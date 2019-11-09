@@ -11,14 +11,14 @@
   </head>
   <body>
     <g:if test="${flash.message}">
-      <div class="alert alert-danger" role="status">${flash.message}</div>
+      <div class="alert alert-danger mt-2" role="status">${flash.message}</div>
     </g:if>
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-8 mx-auto">
           <div class="text-center">
-            <i class="fa fa-user-circle-o" style="font-size: 50px;" aria-hidden="true"></i>
-            <h5 class="text-secondary">Login Panel</h5>
+            <i class="fa fa-address-book" style="font-size: 50px;" aria-hidden="true"></i>
+            <h5 class="text-secondary">Registration Panel</h5>
           </div>
           <g:form controller="User" action="save">
               <div class="form-group">
@@ -52,6 +52,7 @@
                 <g:passwordField class="form-control" name="password"/>
               </div>
               <input type="submit" class="btn btn-success" value="Register">
+              <g:link class="btn btn-warning" style="text-decoration:none;" controller="user" action="login" id="">Cancel</g:link>
           </g:form>
         </div>
       </div>

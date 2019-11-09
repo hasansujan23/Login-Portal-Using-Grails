@@ -16,12 +16,12 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 text-center mt-2">
           <g:if test="${flash.message}">
             <p class="alert alert-success" role="status">${flash.message}</p>
           </g:if>
         </div>
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 text-center mt-2">
           <g:if test="${flash.error}">
             <p class="alert alert-danger" role="status">${flash.error}</p>
           </g:if>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-group">
                   <label for="">Password</label>
-                  <g:textField class="form-control" name="password"/>
+                  <g:passwordField class="form-control" name="password"/>
                 </div>
                 <input type="submit" class="btn btn-outline-success" name="submit" value="Submit">
                 <button class="btn btn-outline-secondary" style="margin-left: 10px;">Clear</button>
