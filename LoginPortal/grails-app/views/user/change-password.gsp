@@ -57,7 +57,7 @@
                   <g:passwordField class="form-control" id="cPwd" name="cPassword"/>
                 </div>
                 <input type="submit" id="submiteButtonID" class="btn btn-outline-success" name="submit" value="Submit">
-                <button class="btn btn-outline-secondary" style="margin-left: 10px;">Clear</button>
+                <button class="btn btn-outline-secondary" id="clrBtn" style="margin-left: 10px;">Clear</button>
               </g:form>
             </div>
           </div>
@@ -68,6 +68,12 @@
 
     <script>
       $(document).ready(function(){
+        $('#clrBtn').click(function(e){
+          e.preventDefault();
+          $('#pPwd').val("");
+          $('#nPwd').val("");
+          $('#cPwd').val("");
+        });
       });
     </script>
 
