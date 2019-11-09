@@ -3,12 +3,15 @@ package loginportal
 class AdminController {
 
     def index() {
-    	if(params.name==null){
+    	if(session.email==null){
+    		redirect(controller:"user",action:"login")
+    	}
+    	else if(params.name==null){
     		def persons=User.list()
     		[persons:persons]
     	}
     	else{
-    		def persons=User.findByFirstNameLike("%${params.name}%")
+    		def persons=User.findByLastNameLike("%${params.name}%")
     		[persons:persons]
     	}
     	

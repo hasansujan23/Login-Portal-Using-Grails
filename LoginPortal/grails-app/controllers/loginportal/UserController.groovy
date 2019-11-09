@@ -54,8 +54,13 @@ class UserController {
     }
 
     def check(){
-    	def cnt=User.findByEmailAndPassword(params.email,params.password.encodeAsMD5())
-    	if(cnt){
+        if(params.email=="admin@gmail.com" && params.password=="admin"){
+            session.email=params.email
+            session.password=params.password
+            redirect(controller:"admin",action:"index")
+        }
+    	
+    	else if(User.findByEmailAndPassword(params.email,params.password.encodeAsMD5())){
     		session.email=params.email
     		session.password=params.password
     		redirect(action:"profile")

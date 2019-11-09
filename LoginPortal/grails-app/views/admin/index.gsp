@@ -53,7 +53,7 @@
         <div class="input-group-prepend">
           <div class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></div>
         </div>
-        <g:textField class="form-control" name="name"/>
+        <g:textField class="form-control" name="name" placeholder="Search by user last name"/>
       </div>
           </g:form>
         </div>
