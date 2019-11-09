@@ -41,17 +41,20 @@ Follow the steps to install the project in your local environment.
 - If you change the database name in phpmyadmin then you have to change the database name in application.yml file also.
 
 # Project Demo
-**Login Page :**
+**Login Panel :**
 <img style="padding:10px;" src="images/login.png" width="100%" />
 
-**Registration Page :**
+**Registration Panel :**
 <img style="padding:10px;" src="images/registration.png" width="100%" />
 
-**User Profile Page :**
+**User Profile Panel :**
 <img style="padding:10px;" src="images/profile.png" width="100%" />
 
-**Change password Page :**
+**Change password Panel :**
 <img style="padding:10px;" src="images/change.png" width="100%" />
 
-**Admin Page :**
+**Admin Panel :**
 <img style="padding:10px;" src="images/admin.png" width="100%" />
+
+**Search Panel :**
+<img style="padding:10px;" src="images/search.png" width="100%" />
