@@ -57,6 +57,7 @@
       </div>
           </g:form>
         </div>
+        
         <div class="col-md-12 mt-5">
           <table class="table">
             <thead>
@@ -72,7 +73,11 @@
               <g:each in="${persons}" var="person" status="i">
               <tr>
                 <td>${person.firstName} ${person.lastName}</td>
-                <td>${person.birthDate}</td>
+                <td>
+                  <% now = new Date() %>
+                  <%age=Math.floor((now-person.birthDate)/365)%>
+                  <%=age%>
+                </td>
                 <td>${person.email}</td>
                 <td>${person.phone}</td>
                 <td>${person.address}</td>
