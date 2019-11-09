@@ -42,6 +42,7 @@ Follow the steps to install the project in your local environment.
 
 # Project Demo
 **Login Page :**
+</br>
 <img src="images/login.png" width="100%" />
 
 **Registration Page :**
