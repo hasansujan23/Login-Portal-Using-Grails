@@ -14,7 +14,7 @@
   crossorigin="anonymous"></script>
   <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
 
-    <title>Login</title>
+    <title>Change Password</title>
   </head>
 
   <body>
