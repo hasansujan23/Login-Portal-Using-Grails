@@ -42,21 +42,21 @@ Follow the steps to install the project in your local environment.
 
 # Project Demo
 **Login Page :**
-</br>
+<br />
 <img src="images/login.png" width="100%" />
 
 **Registration Page :**
-</br>
+<br />
 <img src="images/registration.png" width="100%" />
 
 **User Profile Page :**
-</br>
+<br />
 <img src="images/profile.png" width="100%" />
 
 **Change password Page :**
-</br>
+<br />
 <img src="images/change.png" width="100%" />
 
 **Admin Page :**
-</br>
+<br />
 <img src="images/admin.png" width="100%" />
