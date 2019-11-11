@@ -54,6 +54,7 @@
                 </div>
                 <input type="submit" class="btn btn-outline-success" name="submit" value="Submit">
                 <button class="btn btn-outline-secondary" id="clrBtn" style="margin-left: 10px;">Clear</button>
+                <p class="text-center">Don't have account?Please <g:link class="" controller="user" action="registration" id="">Register</g:link></p>
               </g:form>
             </div>
           </div>

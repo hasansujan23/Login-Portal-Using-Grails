@@ -75,7 +75,7 @@
                 <td>${person.firstName} ${person.lastName}</td>
                 <td>
                   <% now = new Date() %>
-                  <%age=Math.floor((now-person.birthDate)/365)%>
+                  <%age=Math.floor((now-person.birthDate)/365).toInteger()%>
                   <%=age%>
                 </td>
                 <td>${person.email}</td>
